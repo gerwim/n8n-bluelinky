@@ -1,0 +1,54 @@
+{
+  "name": "n8n-nodes-bluelinky",
+  "version": "1.0.0",
+  "description": "n8n node (wrapper for bluelinky)",
+  "license": "MIT",
+  "author": "Gerwim",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n-nodes",
+    "n8n",
+    "bluelinky",
+    "hyundai",
+    "kia",
+    "bluelink"
+  ],
+  "homepage": "https://github.com/gerwim/n8n-bluelinky",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerwim/n8n-bluelinky.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gerwim/n8n-bluelinky/issues"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && npm run copy:assets",
+    "watch": "tsc -w -p tsconfig.json",
+    "prepare": "npm run build",
+    "copy:assets": "copyfiles -u 1 \"src/**/*.{svg,png,jpg,jpeg,ico}\" dist"
+
+  },
+  "dependencies": {
+    "bluelinky": "^9.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "copyfiles": "^2.4.1",
+    "n8n-core": "^1.36.2",
+    "n8n-workflow": "^1.55.0",
+    "typescript": "^5.4.2"
+  },
+  "n8n": {
+    "nodes": [
+      "dist/Nodes/BlueLinky/BlueLinky.node.js"
+    ],
+    "credentials": [
+      "dist/Credentials/BlueLinkyApi.credentials.js"
+    ]
+  }
+}
