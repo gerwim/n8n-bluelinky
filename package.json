@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-bluelinky",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "n8n node (wrapper for bluelinky)",
   "license": "MIT",
   "author": "Gerwim",
@@ -30,11 +30,12 @@
     "build": "tsc -p tsconfig.json && npm run copy:assets",
     "watch": "tsc -w -p tsconfig.json",
     "prepare": "npm run build",
-    "copy:assets": "copyfiles -u 1 \"src/**/*.{svg,png,jpg,jpeg,ico}\" dist"
+    "copy:assets": "copyfiles -u 1 \"src/**/*.{svg,png,jpg,jpeg,ico}\" dist",
+    "debug": "npm run build && node dist/scripts/debug-bluelinky.js"
 
   },
   "dependencies": {
-    "bluelinky": "^9.1.0"
+    "bluelinky": "git+https://github.com/gerwim/bluelinky"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",

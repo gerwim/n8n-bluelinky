@@ -25,13 +25,13 @@ async function initClient(this: IExecuteFunctions): Promise<BlueLinkyClient> {
 		throw new NodeOperationError(this.getNode(), 'Missing BlueLinky credentials');
 	}
 
-	// @ts-ignore -- brand is missing, only required in v10 of Bluelinky
 	const client = new BlueLinkyPackage({
 		username: credentials.username as string,
 		password: credentials.password as string,
 		region: credentials.region as "US" | "CA" | "EU" | "CN" | "AU",
 		language: (credentials.language || 'en') as EULanguages,
 		pin: (credentials.pin || undefined) as string | undefined,
+		brand: credentials.brand as 'hyundai' | 'kia',
 	});
 
 	await client.login();

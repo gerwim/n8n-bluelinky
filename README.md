@@ -21,9 +21,9 @@ Enable Community Nodes in n8n and install this package:
 
 Create “BlueLinky API” credentials with:
 - Username (email)
-- Password
+- :warning: Password (see [the evcc documentation](https://github.com/evcc-io/evcc/wiki/Hyundai-Kia:-Refresh-Token)) on how to get your password (this is a refresh token, not your actual password!)
 - Region (EU/US/CA)
-- Brand (Hyundai/Kia/Genesis)
+- Brand (Hyundai/Kia)
 - Language (default: en)
 - PIN (if required by your region for lock/unlock/start actions)
 

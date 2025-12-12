@@ -42,7 +42,6 @@ export class BlueLinkyApi implements ICredentialType {
 			options: [
 				{ name: 'Hyundai', value: 'hyundai' },
 				{ name: 'Kia', value: 'kia' },
-				{ name: 'Genesis', value: 'genesis' }
 			],
 		},
 		{
